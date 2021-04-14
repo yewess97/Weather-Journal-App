@@ -1,0 +1,270 @@
+/** Fonts **/
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url(https://fonts.gstatic.com/s/oswald/v36/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiZQ.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Oleo Script';
+    src: url(https://fonts.gstatic.com/s/oleoscript/v9/rax5HieDvtMOe0iICsUccChdu08.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCs6KVjbNBYlgoKfw72.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'El Messiri';
+    src: url(https://fonts.gstatic.com/s/elmessiri/v9/K2F3fZBRmr9vQ1pHEey6On6jFy3SYA.woff2) format('woff2');
+}
+
+/*****************************************************************/
+
+/** Some styles to the main page **/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.body {
+    font: 400 1rem/2 "Times New Roman", serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("images/weather-background.jpg"), fixed center no-repeat;
+    background-size: cover;
+    color: #000000;
+    min-height: 100%;
+}
+
+/** Change body's background image by adding/removing these classes in JS **/
+
+.winter-body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("images/winter-backround.jpg"), fixed center no-repeat;
+    background-size: cover;
+}
+
+.spring-body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("images/spring-backround.jpg"), fixed center no-repeat;
+    background-size: cover;
+}
+
+.summer-body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("images/summer-backround.jpg"), fixed center no-repeat;
+    background-size: cover;
+}
+
+/*****************************************************************/
+
+/** Headline **/
+
+.app-headline h3 {
+    font: 500 2rem/2 "Oleo Script", serif;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-shadow: 3px 5px 5px #ff3e06;
+}
+
+/** Change headline's text shadow by adding/removing these classes in JS **/
+
+.app-winter-headline h3 {
+    text-shadow: 3px 4px 4px #6ec4f5;
+}
+
+.app-spring-headline h3 {
+    text-shadow: 3px 4px 4px #17dd1c;
+}
+
+/*****************************************************************/
+
+/** App content styles **/
+
+.label {
+    font: 400 1.5rem/2 "El Messiri", serif;
+    color: #fff3cd;
+    text-shadow: 2px 5px 5px #000000;
+}
+
+.form-control {
+    font: 400 0.95rem "Poppins", serif;
+    color: #191919;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 2px 2px 3px rgb(145, 255, 120);
+    border: 2px solid #c8c400;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+::placeholder,
+::-ms-input-placeholder {
+    font: 400 1rem "Ubuntu", serif;
+    color: #888776;
+}
+
+textarea[placeholder] {
+    padding: 9px 0 0 10px;
+}
+
+#zipCodeError {     /** Style of wrong US zip code that is been entered **/
+    font: 1rem/2 "Poppins", serif;
+    color: #ff0000;
+    text-shadow: 2px 5px 4px #1d0101;
+    margin-top: 0.5rem;
+}
+
+/*****************************************************************/
+
+/** Generating button **/
+
+.btn {
+    font: 400 1.3rem "Oswald", serif;
+    height: 53px;
+    padding: 0 1.6em;
+    color: #1f1d1d;
+    background-color: #ffc107;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #fa971b;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s;
+}
+
+.btn:active {
+    background-color: #d07500;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/*****************************************************************/
+
+/** Recent typed content **/
+
+.entry {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.entry-title {
+    font: 400 1.6rem/2 "El Messiri", serif;
+    color: #fff3cd;
+    text-shadow: 1px 2px 3px #c87800;
+}
+
+#entryHolder h5 {
+    font: 400 1.3rem "Oswald", serif;
+    color: #fff3cd;
+}
+
+#entryHolder p {
+    font: 400 1rem/2.2 "Poppins", serif;
+    color: #f5e887;
+    margin-bottom: 0;
+    margin-left: 1rem;
+}
+
+/*****************************************************************/
+
+/** Footer **/
+
+.footer {
+    width: 100%;
+    background: url("images/footer-background.jpg"), fixed center no-repeat;
+    background-size: cover;
+    text-align: left;
+}
+
+.footer-bar {
+    padding-top: 19px;
+    padding-bottom: 19px;
+}
+
+.footer-social-items li {
+    display: inline-block;
+    margin-left: 30px;
+    float: right;
+}
+
+.footer-social-items li a {
+    font-size: 1.3rem;
+    color: #fff3cd;
+}
+
+.footer-social-items li a:hover {
+    color: #ffc107;
+    transition: all 0.3s ease-in;
+}
+
+.footer-copyright span {
+    font: 400 0.9rem/2 "Poppins", serif;
+    color: #fff3cd;
+}
+
+.footer-copyright a {
+    color: #ffc107;
+    font-weight: 600;
+    padding-right: 2px;
+    padding-left: 5px;
+}
+
+.footer-copyright a:hover {
+    color: #ff7206;
+    transition: all 0.2s ease-in;
+    text-decoration: none;
+}
+
+@media (max-width: 360px) {
+    .footer-social {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .footer-bar {
+        padding-top: 49px;
+        padding-bottom: 52px;
+    }
+
+    .footer-social {
+        margin-top: 20px;
+    }
+
+    .footer-copyright span {
+        font-size: 13px;
+    }
+
+    .footer-social-items li {
+        margin-left: 15px !important;
+        float: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-copyright, .footer-social {
+        text-align: center;
+    }
+}
